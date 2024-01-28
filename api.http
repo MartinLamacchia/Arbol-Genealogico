@@ -1,0 +1,8 @@
+### Loguin Usuario
+POST http://localhost:3001/user/login
+Content-Type: application/json
+
+{
+  "email": "martinperez@gmail.com",
+  "password": "martinperez"
+}
