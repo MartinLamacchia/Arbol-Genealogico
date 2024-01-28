@@ -6,3 +6,6 @@ Content-Type: application/json
   "email": "martinperez@gmail.com",
   "password": "martinperez"
 }
+
+### Traer Familia
+GET http://localhost:3001/family

@@ -5,7 +5,9 @@ const loginUser = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    const userFound = await User.findOne({ email });
+    const userFound = await User.findOne({ email })
+      .populate("familyMembers")
+      .exec();
 
     if (!userFound) {
       return res.status(404).json({ message: "El email es incorrecto" });

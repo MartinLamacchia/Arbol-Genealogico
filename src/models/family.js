@@ -13,6 +13,10 @@ const familySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  relation: {
+    type: String,
+    required: true,
+  },
   familyUser: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
