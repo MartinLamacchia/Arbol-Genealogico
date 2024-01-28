@@ -9,3 +9,11 @@ cloudinary.config({
   api_key: CLOUDINARY_API_KEY,
   api_secret: CLOUDINARY_API_SECRET,
 });
+
+const uploadImage = async (filePath) => {
+  return await cloudinary.uploader.upload(filePath, {
+    folder: "Arbol_Genealogico",
+  });
+};
+
+module.exports = uploadImage;
